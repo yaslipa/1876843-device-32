@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Каталог Device</title>
+  <title>Каталог | Интернет-магазин гаджетов «Девайс»</title>
 </head>
 <body>
 
   <header class="page-header">
-    <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
     <a class="page-header__logo" href="index.html">
       <span class="visually-hidden">На главную</span>
       <img src="" alt="Логотип Девайс">
@@ -76,6 +75,7 @@
 
     <section class="main-inner__products products">
       <h2 class="visually-hidden">Список товаров с фильтрами и сортировкой</h2>
+
       <div class="products__filter">
         <p class="products__subtitle">Фильтр:</p>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -176,48 +176,40 @@
         </a>
       </div>
 
-      <ul class="products__list">
-        <li class="products__item">
-          <div class="products__card product-card">
-            <a class="product-card__link" href="#">
-              <img src="" alt="Любительская селфи-палка">
-              <h3 class="product-card__title">Любительская селфи-палка</h3>
-              <b class="product-card__price">500 ₽</b>
-            </a>
-            <a class="product-card__btn" href="#">Подробнее</a>
-          </div>
-        </li>
-        <li class="products__item">
-          <div class="products__card product-card">
-            <a class="product-card__link" href="#">
-              <img src="" alt="Профессиональная селфи-палка">
-              <h3 class="product-card__title">Профессиональная селфи-палка</h3>
-              <b class="product-card__price">1500 ₽</b>
-            </a>
-            <a class="product-card__btn" href="#">Подробнее</a>
-          </div>
-        </li>
-        <li class="products__item">
-          <div class="products__card product-card">
-            <a class="product-card__link" href="#">
-              <img src="" alt="Непотопляемая селфи-палка">
-              <h3 class="product-card__title">Непотопляемая селфи-палка</h3>
-              <b class="product-card__price">2500 ₽</b>
-            </a>
-            <a class="product-card__btn" href="#">Подробнее</a>
-          </div>
-        </li>
-        <li class="products__item">
-          <div class="products__card product-card product-new">
-            <a class="product-card__link" href="#">
-              <img src="" alt="Селфи-палка «Следуй за мной»">
-              <h3 class="product-card__title">Селфи-палка «Следуй за мной»</h3>
-              <b class="product-card__price">4900 ₽</b>
-            </a>
-            <a class="product-card__btn" href="#">Подробнее</a>
-          </div>
-        </li>
-      </ul>
+      <div class="products__list">
+        <article class="products__card product-card">
+          <a class="product-card__link" href="#">
+            <img src="" alt="Любительская селфи-палка">
+            <h3 class="product-card__title">Любительская селфи-палка</h3>
+            <b class="product-card__price">500 ₽</b>
+          </a>
+          <a class="product-card__btn" href="#">Подробнее</a>
+        </article>
+        <article class="products__card product-card">
+          <a class="product-card__link" href="#">
+            <img src="" alt="Профессиональная селфи-палка">
+            <h3 class="product-card__title">Профессиональная селфи-палка</h3>
+            <b class="product-card__price">1500 ₽</b>
+          </a>
+          <a class="product-card__btn" href="#">Подробнее</a>
+        </article>
+        <article class="products__card product-card">
+          <a class="product-card__link" href="#">
+            <img src="" alt="Непотопляемая селфи-палка">
+            <h3 class="product-card__title">Непотопляемая селфи-палка</h3>
+            <b class="product-card__price">2500 ₽</b>
+          </a>
+          <a class="product-card__btn" href="#">Подробнее</a>
+        </article>
+        <article class="products__card product-card product-new">
+          <a class="product-card__link" href="#">
+            <img src="" alt="Селфи-палка «Следуй за мной»">
+            <h3 class="product-card__title">Селфи-палка «Следуй за мной»</h3>
+            <b class="product-card__price">4900 ₽</b>
+          </a>
+          <a class="product-card__btn" href="#">Подробнее</a>
+        </article>
+      </div>
 
       <button class="btn-more" type="button">Загрузить ещё</button>
 
