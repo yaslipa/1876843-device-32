@@ -1,0 +1,120 @@
+/* Base */
+:root {
+  --basic-extra-dark: #000000;
+  --basic-dark: #444444;
+  --basic-gray: #dcdcdc;
+  --basic-extra-gray: #ebebeb;
+  --basic-light: #f0f0f0;
+  --basic-extra-light: #ffffff;
+  --basic-extra-light--rgb: 255, 255, 255;
+  --special-light: #ffe17f;
+  --special-light-hover: #ffc700;
+  --special-accent-hover: #af4fff;
+  --status-error: #ff3d3d;
+  --status-warning: #fd912e;
+  --status-success: #08af00;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+
+/* Header */
+.page-header {
+  background: var(--special-light);
+}
+
+/* Index: categories */
+.categories__list a {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background: var(--special-light) no-repeat 50% 50%;
+}
+
+.categories__list .virtual-reality {
+  background-image: url("/img/icons/virtual-reality.svg");
+}
+
+.categories__list .monopod {
+  background-image: url("/img/icons/monopod.svg");
+}
+
+.categories__list .action-camera {
+  background-image: url("/img/icons/action-camera.svg");
+}
+
+.categories__list .fitnes-band {
+  background-image: url("/img/icons/fitnes-band.svg");
+}
+
+.categories__list .smartwatch {
+  background-image: url("/img/icons/smartwatch.svg");
+}
+
+.categories__list .quadrocopter {
+  background-image: url("/img/icons/quadrocopter.svg");
+}
+
+/* Index: services */
+.services__tabs li {
+  min-height: 195px;
+  background: no-repeat 100% 50%;
+}
+
+.services__tabs .services__delivery {
+  background-image: url("/img/icons/delivery.svg");
+}
+
+.services__tabs .services__warranty {
+  background-image: url("/img/icons/warranty.svg");
+}
+
+.services__tabs .services__credit {
+  background-image: url("/img/icons/credit.svg");
+}
+
+/* Index: subscribe */
+.subscribe {
+  background: var(--basic-light);
+}
+
+.subscribe__free {
+  padding-left: 35px;
+  background: url("/img/icons/tick-big.svg") no-repeat;
+
+}
+
+/* Footer */
+.page-footer {
+  background: var(--basic-dark);
+}
+
+.page-footer path {
+  fill: var(--special-light-hover);
+}
+
+.page-footer__social .btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--basic-extra-light--rgb), 0.3) no-repeat 50% 50%;
+  border-radius: 50%;
+}
+
+.page-footer__social .btn-facebook {
+  background-image: url("/img/icons/facebook.svg");
+}
+
+.page-footer__social .btn-instagram {
+  background-image: url("/img/icons/instagram.svg");
+}
+
+.page-footer__social .btn-twitter {
+  background-image: url("/img/icons/twitter.svg");
+}
