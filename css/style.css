@@ -86,27 +86,27 @@ body {
 }
 
 .categories__list .virtual-reality {
-  background-image: url("/img/icons/virtual-reality.svg");
+  background-image: url("../img/icons/virtual-reality.svg");
 }
 
 .categories__list .monopod {
-  background-image: url("/img/icons/monopod.svg");
+  background-image: url("../img/icons/monopod.svg");
 }
 
 .categories__list .action-camera {
-  background-image: url("/img/icons/action-camera.svg");
+  background-image: url("../img/icons/action-camera.svg");
 }
 
 .categories__list .fitnes-band {
-  background-image: url("/img/icons/fitnes-band.svg");
+  background-image: url("../img/icons/fitnes-band.svg");
 }
 
 .categories__list .smartwatch {
-  background-image: url("/img/icons/smartwatch.svg");
+  background-image: url("../img/icons/smartwatch.svg");
 }
 
 .categories__list .quadrocopter {
-  background-image: url("/img/icons/quadrocopter.svg");
+  background-image: url("../img/icons/quadrocopter.svg");
 }
 
 /* Index: services */
@@ -117,15 +117,15 @@ body {
 }
 
 .services__tabs .services__delivery {
-  background-image: url("/img/icons/delivery.svg");
+  background-image: url("../img/icons/delivery.svg");
 }
 
 .services__tabs .services__warranty {
-  background-image: url("/img/icons/warranty.svg");
+  background-image: url("../img/icons/warranty.svg");
 }
 
 .services__tabs .services__credit {
-  background-image: url("/img/icons/credit.svg");
+  background-image: url("../img/icons/credit.svg");
 }
 
 /* Index: delivery button */
@@ -146,7 +146,7 @@ body {
   left: 0;
   width: 125px;
   height: 100px;
-  background: var(--special-light) url("/img/icons/delivery-btn.svg") no-repeat 50% 50%;
+  background: var(--special-light) url("../img/icons/delivery-btn.svg") no-repeat 50% 50%;
 }
 
 /* Index: subscribe */
@@ -156,7 +156,7 @@ body {
 
 .subscribe__free {
   padding-left: 35px;
-  background: url("/img/icons/tick-big.svg") no-repeat;
+  background: url("../img/icons/tick-big.svg") no-repeat;
 }
 
 /* Inner page (catalog) */
