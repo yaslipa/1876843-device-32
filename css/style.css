@@ -77,15 +77,7 @@ body {
   width: 100%;
 }
 
-.page-header,
-.slider,
-.categories,
-.services__inner,
-.delivery-btn,
-.about,
-.subscribe__inner,
-.page-footer__inner,
-.main-inner__header {
+.container {
   width: 1160px;
   margin: 0 auto;
 }
