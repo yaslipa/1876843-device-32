@@ -20,18 +20,16 @@
     <nav class="main-nav">
 
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <p>
-          <label class="visually-hidden" for="search-text">Поиск по сайту</label>
-          <input class="search-form__input" type="text" name="search-text" id="search-text" placeholder="Поиск по сайту" required>
-          <button class="search-form__btn" type="submit">Найти</button>
-        </p>
+        <label class="visually-hidden" for="search-text">Поиск по сайту</label>
+        <input class="search-form__input" type="text" name="search-text" id="search-text" placeholder="Поиск по сайту" required>
+        <button class="search-form__btn" type="submit">Найти</button>
       </form>
 
       <ul class="main-nav__list user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">Коля Петухов</a>
         </li>
-        <li class="user-nav__item user-authorized">
+        <li class="user-nav__item user-nav__login--authorized">
           <a class="user-nav__link" href="#">Выйти</a>
         </li>
         <li class="user-nav__item">
@@ -61,7 +59,7 @@
     </nav>
   </header>
 
-  <main class="main-inner">
+  <main class="main-inner main-container">
     <header class="main-inner__header container">
       <h1 class="main-inner__title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
@@ -258,7 +256,7 @@
             <path d="M83.4 0v10.1L91 0h-7.6Z"/>
           </svg>
         </a>
-        <address>
+        <address class="page-footer__address">
           <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
