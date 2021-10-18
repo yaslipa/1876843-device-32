@@ -137,7 +137,7 @@
       <section class="services">
         <div class="container">
           <h2 class="visually-hidden">Наши услуги</h2>
-          <ul class="services__btns">
+          <ul class="services__btns services__up">
             <li>
               <button class="services__btn services__btn--active" type="button">Доставка</button>
             </li>
@@ -148,16 +148,17 @@
               <button class="services__btn" type="button">Кредит</button>
             </li>
           </ul>
-          <ul class="services__tabs">
+          <ul class="services__tabs services__up">
             <li class="services__tab services__tab--active services__delivery">
               <h2 class="services__title">Доставка</h2>
-              <p>Мы с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
+              <p class="services__descr">Мы с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
             </li>
-            <li class="services__tab services__warranty">
+            <!-- Неактивные вкладки пока прячем через hidden -->
+            <li class="services__tab services__warranty" hidden>
               <h2 class="services__title">Гарантия</h2>
               <p>Если из-за&nbsp;возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не&nbsp;дом, конечно&nbsp;же.</p>
             </li>
-            <li class="services__tab services__credit">
+            <li class="services__tab services__credit" hidden>
               <h2 class="services__title">Кредит</h2>
               <p>Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты подберут для&nbsp;вас наиболее выгодные условия кредита. Выгодные для&nbsp;банка, разумеется.</p>
             </li>
@@ -168,11 +169,11 @@
       <a class="delivery-btn container" href="#">Доставим редкий товар под заказ</a>
 
       <div class="about container">
-        <section class="about__info">
+        <section class="about__block about__info">
           <h2 class="about__title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в&nbsp;каждом из&nbsp;нас.</p>
           <p>Мы можем доставить ваш&nbsp;товар в&nbsp;самые отдалённые уголки России транспортными компаниями:</p>
-          <ul>
+          <ul class="about__list">
             <li>Меловые линии</li>
             <li>СДИК</li>
             <li>ТоксБерри</li>
@@ -180,16 +181,18 @@
           <a class="about__link" href="#">Подробнее о&nbsp;нас</a>
         </section>
 
-        <section class="about__contacts">
+        <section class="about__block about__contacts">
           <h2 class="about__title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в&nbsp;наш офис. <br>Заодно, сможете проверить работоспособность покупки.</p>
           <h3 class="about__subtitle">Интернет-магазин «Девайс»</h3>
           <address class="about__address">
-            <p>Санкт-Петербург, набережная реки Карповки, 5, литера&nbsp;П.</p>
-            <a class="about__phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+            <p>
+              Санкт-Петербург, набережная реки Карповки, 5, литера&nbsp;П.<br>
+              <a class="about__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </p>
           </address>
           <h4 class="about__subtitle">Время работы</h4>
-          <dl>
+          <dl class="about__time">
             <dt>пн—пт:</dt>
             <dd>с&nbsp;10:00 до&nbsp;22:00</dd>
             <dt>сб—вс:</dt>
@@ -202,7 +205,7 @@
       <section class="subscribe">
         <div class="container">
           <h2 class="subscribe__title">Подпишитесь на&nbsp;рассылку</h2>
-          <p class="subscribe__descr">Еженедельный дайджест с&nbsp;обзорами новинок, длительными тест-драйвами, распаковками, а&nbsp;также акции, спецпредложения и&nbsp;вот это вот всё.</p>
+          <p class="subscribe__descr">Еженедельный дайджест с&nbsp;обзорами новинок,<br>длительными тест-драйвами, распаковками, а&nbsp;также акции, спецпредложения и&nbsp;вот это вот всё.</p>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="email">Введите e-mail</label>
