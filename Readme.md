@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Елена Кирилюк](https://up.htmlacademy.ru/htmlcss/32/user/1876843).
-* Наставник: [Александр Григорьев](https://htmlacademy.ru/profile/id43108).
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
