@@ -26,24 +26,25 @@
       </form>
 
       <ul class="main-nav__list user-nav">
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__profile">
           <a class="user-nav__link" href="#">Коля Петухов</a>
         </li>
-        <li class="user-nav__item user-nav__login--authorized">
+        <li class="user-nav__item user-nav__exit">
           <a class="user-nav__link" href="#">Выйти</a>
         </li>
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__compare">
           <a class="user-nav__link" href="#">Сравнить</a>
         </li>
-        <li class="user-nav__item">
+        <li class="user-nav__item user-nav__cart">
           <a class="user-nav__link" href="#">
-            <b class="cart-quantity">2</b> Корзина
+            <b class="cart-quantity">2</b>
+            Корзина
           </a>
         </li>
       </ul>
 
       <ul class="main-nav__list basic-nav">
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__catalog">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
@@ -78,8 +79,8 @@
     <section class="main-inner__products products">
       <h2 class="visually-hidden">Список товаров с фильтрами и сортировкой</h2>
 
-      <div class="products__filter filter">
-        <div class="filter__inner">
+      <div class="products__filter-container">
+        <div class="products__filter">
           <p class="products__subtitle">Фильтр:</p>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="filter-form__price filter-price">
@@ -164,7 +165,7 @@
         </div>
       </div>
 
-      <div class="products_container">
+      <div class="products__main-container">
         <div class="products__sort">
           <form class="sort-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="products__subtitle" for="sorting">Сортировка:</label>
@@ -184,7 +185,7 @@
         <div class="products__list">
           <article class="products__card product-card">
             <a class="product-card__link" href="#">
-              <img src="img/content/product-1.jpg" alt="Любительская селфи-палка">
+              <img src="img/content/product-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Любительская селфи-палка</h3>
               <b class="product-card__price">500 ₽</b>
             </a>
@@ -192,25 +193,25 @@
           </article>
           <article class="products__card product-card">
             <a class="product-card__link" href="#">
-              <img src="img/content/product-2.jpg" alt="Профессиональная селфи-палка">
+              <img src="img/content/product-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Профессиональная селфи-палка</h3>
-              <b class="product-card__price">1500 ₽</b>
+              <b class="product-card__price">1&thinsp;500 ₽</b>
             </a>
             <a class="product-card__btn btn" href="#">Подробнее</a>
           </article>
           <article class="products__card product-card">
             <a class="product-card__link" href="#">
-              <img src="img/content/product-3.jpg" alt="Непотопляемая селфи-палка">
+              <img src="img/content/product-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Непотопляемая селфи-палка</h3>
-              <b class="product-card__price">2500 ₽</b>
+              <b class="product-card__price">2&thinsp;500 ₽</b>
             </a>
             <a class="product-card__btn btn" href="#">Подробнее</a>
           </article>
           <article class="products__card product-card product-new">
             <a class="product-card__link" href="#">
-              <img src="img/content/product-4.jpg" alt="Селфи-палка «Следуй за мной»">
-              <h3 class="product-card__title">Селфи-палка «Следуй за мной»</h3>
-              <b class="product-card__price">4900 ₽</b>
+              <img src="img/content/product-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+              <h3 class="product-card__title">Селфи-палка «Следуй за&nbsp;мной»</h3>
+              <b class="product-card__price">4&thinsp;900 ₽</b>
             </a>
             <a class="product-card__btn btn" href="#">Подробнее</a>
           </article>
@@ -219,25 +220,25 @@
         <button class="btn-more" type="button">Загрузить ещё</button>
 
         <ul class="products__pagination pagination">
-          <li class="pagination__nav">
+          <li class="pagination__btn pagination__btn-prev">
             <a href="#">Назад</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="#">1</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="#">2</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="#">3</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="#">...</a>
           </li>
-          <li>
+          <li class="pagination__item">
             <a href="#">15</a>
           </li>
-          <li class="pagination__nav">
+          <li class="pagination__btn pagination__btn-next">
             <a href="#">Вперёд</a>
           </li>
         </ul>
