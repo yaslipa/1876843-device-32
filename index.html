@@ -63,6 +63,7 @@
         <h2 class="visually-hidden">Слайдер</h2>
 
         <ol class="slider__list">
+          <!-- Слайд 1 -->
           <li>
             <article class="slider__item">
               <h3 class="visually-hidden">Квадрокоптер</h3>
@@ -73,10 +74,61 @@
                 <a class="slider__link" href="#">Подробнее</a>
                 <h4 class="visually-hidden">Характеристики</h4>
                 <dl class="slider__details">
-                  <dt>Дальность полета</dt>
-                  <dd>800 м</dd>
-                  <dt>Радиус поражения</dt>
-                  <dd>50 м</dd>
+                  <div class="slider__detail">
+                    <dt>Дальность полета</dt>
+                    <dd>800 м</dd>
+                  </div>
+                  <div class="slider__detail">
+                    <dt>Радиус поражения</dt>
+                    <dd>50 м</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </li>
+          <!-- Слайд 2 -->
+          <li>
+            <article class="slider__item">
+              <h3 class="visually-hidden">Фитнес-браслет</h3>
+              <img class="slider__img" src="img/content/slider-2.png" alt="Фитнес-браслет с мотивирующей надписью 'Я вижу, что ты снова ешь'" width="560" height="560">
+              <div class="slider__descr">
+                <p class="slider__lead">Худеем<br>правильно!</p>
+                <p class="slider__txt">Мотивирующие фитнес-браслеты помогут найти в&nbsp;себе силы не&nbsp;пропускать занятия и&nbsp;соблюдать диету.</p>
+                <a class="slider__link" href="#">Подробнее</a>
+                <h4 class="visually-hidden">Характеристики</h4>
+                <dl class="slider__details">
+                  <div class="slider__detail">
+                    <dt>Без подзарядки</dt>
+                    <dd>48 часов</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </li>
+          <!-- Слайд 3 -->
+          <li>
+            <article class="slider__item">
+              <h3 class="visually-hidden">Фитнес-браслет</h3>
+              <img class="slider__img" src="img/content/slider-3.png" alt="Фитнес-браслет с мотивирующей надписью 'Я вижу, что ты снова ешь'" width="560" height="560">
+              <div class="slider__descr">
+                <p class="slider__lead">Делай селфи,<br> как&nbsp;Бен Стиллер! </p>
+                <p class="slider__txt">Самая длинная палка для&nbsp;селфи доступна в&nbsp;нашем магазине. Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;кг.
+                </p>
+                <a class="slider__link" href="#">Подробнее</a>
+                <h4 class="visually-hidden">Характеристики</h4>
+                <dl class="slider__details">
+                  <div class="slider__detail">
+                    <dt>Длина палки</dt>
+                    <dd>8,5 м</dd>
+                  </div>
+                  <div class="slider__detail">
+                    <dt>Вес палки</dt>
+                    <dd>5 кг</dd>
+                  </div>
+                  <div class="slider__detail">
+                    <dt>Материал</dt>
+                    <dd>Карбон</dd>
+                  </div>
                 </dl>
               </div>
             </article>
@@ -150,16 +202,15 @@
             </li>
           </ul>
           <ul class="services__tabs services__up">
-            <li class="services__tab services__tab--active services__delivery">
+            <li class="services__tab services__delivery">
               <h2 class="services__title">Доставка</h2>
               <p class="services__descr">Мы с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
             </li>
-            <!-- Неактивные вкладки пока прячем через hidden -->
-            <li class="services__tab services__warranty" hidden>
+            <li class="services__tab services__warranty">
               <h2 class="services__title">Гарантия</h2>
               <p>Если из-за&nbsp;возгорания купленного у&nbsp;нас товара у&nbsp;вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не&nbsp;дом, конечно&nbsp;же.</p>
             </li>
-            <li class="services__tab services__credit" hidden>
+            <li class="services__tab services__credit">
               <h2 class="services__title">Кредит</h2>
               <p>Залезть в&nbsp;долговую яму стало проще! Кредитные консультанты подберут для&nbsp;вас наиболее выгодные условия кредита. Выгодные для&nbsp;банка, разумеется.</p>
             </li>
@@ -254,7 +305,7 @@
         <section class="page-footer__social">
           <h2 class="visually-hidden">Девайс в соцсетях</h2>
           <ul class="page-footer__social-list">
-            <li>
+            <li class="page-footer__social-item">
               <a class="btn btn-social btn-facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
                 <svg width="9" height="18" viewBox="0 0 9 18" xmlns="http://www.w3.org/2000/svg">

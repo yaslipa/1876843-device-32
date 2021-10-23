@@ -97,7 +97,9 @@ body {
 
 .main-nav__list,
 .slider__list,
+.slider__details,
 .slider__pagination,
+.slider__pagination li,
 .categories__list,
 .services__btns,
 .services__btns li,
@@ -154,6 +156,7 @@ body {
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -257,13 +260,17 @@ body {
 
 /* Index: slider */
 .slider {
+  position: relative;
   margin-bottom: 70px;
   border-top: 114px solid var(--special-light);
 }
 
 .slider__list {
+  display: flex;
+  width: 1160px;
   counter-reset: slider-counter;
   margin-top: -150px;
+  overflow: hidden;
 }
 
 .slider__list li {
@@ -276,18 +283,19 @@ body {
   position: absolute;
   top: 7px;
   right: 49px;
+  z-index: 0;
   font-size: 180px;
   line-height: 1;
   font-weight: 800;
   color: var(--basic-extra-light);
-  z-index: 0;
 }
 
 .slider__item {
   position: relative;
-  display: flex;
-  justify-content: space-between;
   z-index: 1;
+  display: flex;
+  width: 1160px;
+  justify-content: space-between;
 }
 
 .slider__img {
@@ -300,11 +308,25 @@ body {
 }
 
 .slider__lead {
-  margin: 0;
+  margin: 0 0 28px 0;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: var(--basic-extra-dark);
+}
+
+.slider__txt {
+  margin: 0 0 36px 0;
+}
+
+.slider__details {
+  display: flex;
+}
+
+.slider__detail {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 21px;
 }
 
 .slider__details dt {
@@ -312,6 +334,7 @@ body {
 }
 
 .slider__details dd {
+  margin: 0 60px 11px 0;
   font-size: 36px;
   color: var(--basic-extra-dark);
 }
@@ -320,6 +343,7 @@ body {
   display: block;
   width: 220px;
   height: 50px;
+  margin-bottom: 54px;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 50px;
   letter-spacing: 0.2em;
@@ -333,21 +357,42 @@ body {
   background-color: var(--special-light);
 }
 
+.slider__nav {
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+}
+
 .slider__btn {
-  display: inline-block;
   width: 20px;
   height: 60px;
-  background: url("../img/icons/right-big-arrow.svg") no-repeat;
   border: none;
+  cursor: pointer;
 }
 
 .slider__prev {
-  background-image: url("../img/icons/left-big-arrow.svg");
+  margin-left: 19px;
+  background: url("../img/icons/left-big-arrow.svg") no-repeat;
 }
 
-.slider__pagination li {
-  display: inline-block;
-  padding: 0 22px 0 0;
+.slider__next {
+  margin-right: 19px;
+  background: url("../img/icons/right-big-arrow.svg") no-repeat;
+}
+
+.slider__pagination {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.slider__pagination li:not(:last-child) {
+  margin-right: 22px;
 }
 
 .slider__pagination-btn {
@@ -358,6 +403,7 @@ body {
   background: var(--basic-extra-light);
   border: 2px solid var(--basic-extra-dark);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider__pagination-btn--active {
@@ -489,18 +535,18 @@ body {
 }
 
 .services__tabs {
+  display: flex;
   width: 695px;
   padding-top: 72px;
+  overflow: hidden;
 }
 
 .services__tab {
+  flex-shrink: 0;
+  width: 495px;
   min-height: 195px;
   padding-right: 200px;
-  background: no-repeat 100% 50%;
-}
-
-.services__tab--active {
-  display: block;
+  background: no-repeat 100% 0;
 }
 
 .services__title {
@@ -519,6 +565,7 @@ body {
 
 .services__delivery {
   background-image: url("../img/icons/delivery.svg");
+  background-position-y: 16%;
 }
 
 .services__warranty {
@@ -1006,7 +1053,7 @@ body {
 /* Footer */
 .page-footer {
   flex-shrink: 0;
-  padding: 45px 0;
+  padding: 45px 0 61px;
   font-size: 16px;
   line-height: 19px;
   color: var(--basic-extra-light);
@@ -1036,7 +1083,7 @@ body {
 }
 
 .page-footer__address p {
-  width: 240px;
+  width: 250px;
   margin: 0;
 }
 
@@ -1045,13 +1092,12 @@ body {
 }
 
 .page-footer__info {
-  margin-bottom: 62px;
+  margin: -33px 250px 62px;
 }
 
 .page-footer__info-list {
   display: flex;
   justify-content: center;
-  margin-top: -33px;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -1069,9 +1115,7 @@ body {
 
 .page-footer__social {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 654px;
 }
 
 .page-footer__social::before {
@@ -1083,13 +1127,15 @@ body {
 
 .page-footer__social-list {
   display: flex;
+  margin: auto;
+  padding-right: 80px;
 }
 
-.page-footer__social-list li {
+.page-footer__social-item {
   width: 40px;
 }
 
-.page-footer__social-list li:not(:last-child) {
+.page-footer__social-item:not(:last-child) {
   margin-right: 15px;
 }
 
