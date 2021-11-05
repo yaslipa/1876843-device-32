@@ -64,14 +64,14 @@
     <header class="main-inner__header container">
       <h1 class="main-inner__title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
-        <li>
-          <a href="index.html">Главная</a>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
         </li>
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li>
-          <a href="#">Моноподы для селфи</a>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Моноподы для селфи</a>
         </li>
       </ul>
     </header>
@@ -160,7 +160,7 @@
               </ul>
             </fieldset>
 
-            <button class="filter-form__btn btn" type="submit">Показать</button>
+            <button class="filter-form__btn main-btn" type="submit">Показать</button>
           </form>
         </div>
       </div>
@@ -174,10 +174,10 @@
             </select>
             <button class="visually-hidden" type="submit">Отсортировать товары</button>
           </form>
-          <a class="sort-btn btn-up btn-active" href="#">
+          <a class="sort-btn btn-up" href="#">
             <span class="visually-hidden">По возрастанию</span>
           </a>
-          <a class="sort-btn btn-down" href="#">
+          <a class="sort-btn btn-down sort-btn--active" href="#">
             <span class="visually-hidden">По убыванию</span>
           </a>
         </div>
@@ -189,7 +189,9 @@
               <h3 class="product-card__title">Любительская селфи&#8209;палка</h3>
               <b class="product-card__price">500 ₽</b>
             </a>
-            <a class="product-card__btn btn" href="#">Подробнее</a>
+            <div class="product-card__tip">
+              <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
+            </div>
           </article>
           <article class="products__card product-card">
             <a class="product-card__link" href="#">
@@ -197,7 +199,9 @@
               <h3 class="product-card__title">Профессиональная селфи&#8209;палка</h3>
               <b class="product-card__price">1&thinsp;500 ₽</b>
             </a>
-            <a class="product-card__btn btn" href="#">Подробнее</a>
+            <div class="product-card__tip">
+              <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
+            </div>
           </article>
           <article class="products__card product-card">
             <a class="product-card__link" href="#">
@@ -205,7 +209,9 @@
               <h3 class="product-card__title">Непотопляемая селфи&#8209;палка</h3>
               <b class="product-card__price">2&thinsp;500 ₽</b>
             </a>
-            <a class="product-card__btn btn" href="#">Подробнее</a>
+            <div class="product-card__tip">
+              <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
+            </div>
           </article>
           <article class="products__card product-card product-new">
             <a class="product-card__link" href="#">
@@ -213,33 +219,35 @@
               <h3 class="product-card__title">Селфи-палка «Следуй за&nbsp;мной»</h3>
               <b class="product-card__price">4&thinsp;900 ₽</b>
             </a>
-            <a class="product-card__btn btn" href="#">Подробнее</a>
+            <div class="product-card__tip">
+              <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
+            </div>
           </article>
         </div>
 
         <button class="btn-more" type="button">Загрузить ещё</button>
 
         <ul class="products__pagination pagination">
-          <li class="pagination__btn pagination__btn-prev">
-            <a href="#">Назад</a>
+          <li class="pagination__nav">
+            <a class="pagination__btn" href="#">Назад</a>
           </li>
           <li class="pagination__item">
-            <a href="#">1</a>
+            <a class="pagination__link" href="#">1</a>
           </li>
           <li class="pagination__item">
-            <a href="#">2</a>
+            <a class="pagination__link" href="#">2</a>
           </li>
           <li class="pagination__item">
-            <a href="#">3</a>
+            <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a href="#">...</a>
+            <a class="pagination__link" href="#">...</a>
           </li>
           <li class="pagination__item">
-            <a href="#">15</a>
+            <a class="pagination__link" href="#">15</a>
           </li>
-          <li class="pagination__btn pagination__btn-next">
-            <a href="#">Вперёд</a>
+          <li class="pagination__nav">
+            <a class="pagination__btn" href="#">Вперёд</a>
           </li>
         </ul>
       </div>
@@ -282,7 +290,7 @@
         <h2 class="visually-hidden">Девайс в соцсетях</h2>
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
-            <a class="btn btn-social btn-facebook" href="https://www.facebook.com/htmlacademy">
+            <a class="btn-social btn-facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Facebook</span>
               <svg width="9" height="18" viewBox="0 0 9 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.5 3H9V0H5.6C2.8 0 2 1.7 2 4.2V6H0V9H2V18H5V9H8.3L8.9 6H5V4.5C5 3.7 5.3 3 6.5 3Z"/>
@@ -290,15 +298,16 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="btn btn-social btn-instagram" href="https://www.instagram.com/htmlacademy/">
+            <a class="btn-social btn-instagram" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Instagram</span>
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.7 1.3C13.8 0.4 12.7 0 11.3 0H4.7C1.9 0 0 1.9 0 4.7V11.3C0 12.7 0.4 13.9 1.4 14.7C2.3 15.6 3.4 16 4.7 16H11.3C12.7 16 13.9 15.6 14.7 14.7C15.5 13.8 16 12.7 16 11.3V4.7C16 3.3 15.6 2.1 14.7 1.3ZM8 12.1C5.8 12.1 3.9 10.3 3.9 8C3.9 5.7 5.8 3.9 8 3.9C10.2 3.9 12.1 5.7 12.1 8C12.1 10.3 10.2 12.1 8 12.1ZM12.6 4.7C11.9 4.7 11.3 4.2 11.3 3.4C11.3 2.6 11.8 2.1 12.6 2.1C13.3 2.1 13.9 2.7 13.9 3.4C13.9 4.1 13.3 4.7 12.6 4.7Z"/>
+                <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M14.7 1.3c-.9-.9-2-1.3-3.4-1.3H4.7C1.9 0 0 1.9 0 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4V4.7c0-1.4-.4-2.6-1.3-3.4ZM8 12.1c-2.2 0-4.1-1.8-4.1-4.1S5.8 3.9 8 3.9c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/>
               </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="btn btn-social btn-twitter" href="https://twitter.com/htmlacademy_ru">
+            <a class="btn-social btn-twitter" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Twitter</span>
               <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.7 0.0999675C11.2 -0.400033 12.3 0.399967 12.9 1.19997C13.4 0.999967 14 0.799967 14.6 0.599967C14.6 1.39997 14.1 1.99997 13.8 2.19997C14.5 2.39997 15 1.79997 15 1.79997C14.9 2.69997 14.1 3.49997 13.6 3.69997C13.4 9.99997 10.8 14.1 4.7 14C4.2 14 4.8 14 4.3 14C4 14 0.6 13.6 0 12.2C2 12.4 3.4 11.8 4.1 11.1C3.3 10.8 1.7 10.7 1.5 8.29997C1.8 8.49997 2 8.59997 2.6 8.49997C1.5 7.69997 0.3 6.99997 0.4 4.99997C0.7 5.29997 1.3 5.49997 1.6 5.39997C1 5.19997 -0.2 2.29997 0.8 0.799967C2.4 2.49997 4.1 4.19997 7.1 4.29997C7.3 2.19997 8.1 0.799967 9.7 0.0999675Z" />
