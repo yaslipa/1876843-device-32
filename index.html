@@ -22,10 +22,11 @@
 
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
           <label class="visually-hidden" for="search-text">Поиск по сайту</label>
-          <input class="search-form__input search-form__input--active" type="text" name="search-text" id="search-text" placeholder="Поиск по сайту" required>
+          <input class="search-form__input" type="text" name="search-text" id="search-text" placeholder="Поиск по сайту" required>
           <button class="search-form__btn" type="submit">Найти</button>
         </form>
 
+        <!-- Меню пользователя -->
         <ul class="main-nav__list user-nav">
           <li class="user-nav__item user-nav__login">
             <a class="user-nav__link" href="#">Войти</a>
@@ -38,12 +39,81 @@
               <b class="cart-quantity">2</b>
               Корзина
             </a>
+            <!-- Popover корзины -->
+            <!-- для появления всплывающей корзины блоку popover добавляется класс popover-open -->
+            <!-- <div class="popover popover-cart popover-open"> -->
+            <div class="popover popover-cart">
+              <div class="popover__content">
+                <h2 class="popover__title visually-hidden">Корзина</h2>
+                <ul class="popover-cart__list">
+                  <li class="popover-cart__item">
+                    <a class="popover-cart__link" href="#">
+                      <img class="popover-cart__img" src="img/content/product-1-thumb.jpg" alt="Любительская селфи-палка" width="41" height="43">
+                      Любительская селфи&#8209;палка
+                    </a>
+                    <button class="popover__del-btn" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="popover-cart__item">
+                    <a class="popover-cart__link" href="#">
+                      <img class="popover-cart__img" src="img/content/product-2-thumb.jpg" alt="Профессиональная селфи-палка" width="41" height="43">
+                      Профессиональная селфи&#8209;палка
+                    </a>
+                    <button class="popover__del-btn" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <dl class="popover-cart__details">
+                  <dt>Товаров</dt>
+                  <dd>2</dd>
+                  <dt>Сумма</dt>
+                  <dd>2000&nbsp;₽</dd>
+                </dl>
+                <a class="popover__open-btn" href="#">Открыть корзину</a>
+              </div>
+            </div>
+            <!-- /Popover корзины -->
           </li>
         </ul>
+        <!-- /Меню пользователя -->
 
+        <!-- Главное меню -->
         <ul class="main-nav__list basic-nav">
-          <li class="basic-nav__item  basic-nav__catalog">
-            <a class="basic-nav__link" href="catalog.html">Каталог товаров</a>
+          <li class="basic-nav__item basic-nav__catalog">
+            <a class="basic-nav__link catalog-link" href="catalog.html">
+              <b class="catalog-link__txt">Каталог товаров</b>
+              <span class="catalog-link__icon"></span>
+            </a>
+            <!-- Выпадающее подменю -->
+            <div class="basic-nav__subcatalog subcatalog">
+              <ul class="subcatalog__list">
+                <li class="subcatalog__item">
+                  <a class="subcatalog__link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="subcatalog__item">
+                  <a class="subcatalog__link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="subcatalog__item">
+                  <a class="subcatalog__link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="subcatalog__list">
+                <li class="subcatalog__item">
+                  <a  class="subcatalog__link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="subcatalog__item">
+                  <a class="subcatalog__link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="subcatalog__list">
+                <li class="subcatalog__item">
+                  <a class="subcatalog__link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /Выпадающее подменю -->
           </li>
           <li class="basic-nav__item">
             <a class="basic-nav__link" href="#">Доставка</a>
@@ -55,6 +125,7 @@
             <a class="basic-nav__link" href="#">Контакты</a>
           </li>
         </ul>
+        <!-- /Главное меню -->
       </nav>
     </header>
 
@@ -124,17 +195,17 @@
         </ol>
 
         <div class="slider__nav">
-          <button class="slider__btn slider__prev" type="button">
+          <button class="slider__btn slider__btn-prev" type="button">
             <span class="visually-hidden">Предыдущий товар</span>
           </button>
-          <button class="slider__btn slider__next" type="button">
+          <button class="slider__btn slider__btn-next" type="button">
             <span class="visually-hidden">Следующий товар</span>
           </button>
         </div>
 
         <ol class="slider__pagination">
           <li>
-            <button class="slider__pagination-btn slider__pagination-btn--active" type="button" disabled>
+            <button class="slider__pagination-btn slider__pagination-btn--current" type="button" disabled>
               <span class="visually-hidden">1 товар</span>
             </button>
           </li>
@@ -180,7 +251,7 @@
           <h2 class="visually-hidden">Наши услуги</h2>
           <ul class="services__btns services__up">
             <li>
-              <button class="main-btn services__btn services__btn--active" type="button" disabled>Доставка</button>
+              <button class="main-btn services__btn services__btn--current" type="button" disabled>Доставка</button>
             </li>
             <li>
               <button class="main-btn services__btn" type="button">Гарантия</button>
@@ -226,7 +297,7 @@
 
         <section class="about__block about__contacts">
           <h2 class="about__title">Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в&nbsp;наш офис. <br>Заодно, сможете проверить работоспособность покупки.</p>
+          <p>Вы можете забрать товар сами, заехав в&nbsp;наш офис. <br>Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="about__subtitle">Интернет-магазин «Девайс»</h3>
           <address class="about__address">
             <p>
@@ -250,9 +321,10 @@
           <h2 class="subscribe__title">Подпишитесь на&nbsp;рассылку</h2>
           <p class="subscribe__descr">Еженедельный дайджест с&nbsp;обзорами новинок,<br>длительными тест-драйвами, распаковками, а&nbsp;также акции, спецпредложения и&nbsp;вот это вот всё.</p>
 
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="email">Введите e-mail</label>
-            <input class="subscribe-form__input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Введите e-mail</label>
+            <!-- Для отображения ошибки ввода полю input необходимо добавить класс error -->
+            <input class="subscribe-form__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
             <button class="subscribe-form__btn" type="submit">Подписаться</button>
           </form>
 
@@ -297,7 +369,7 @@
           <h2 class="visually-hidden">Девайс в соцсетях</h2>
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a class="btn btn-social btn-facebook" href="https://www.facebook.com/htmlacademy">
+              <a class="btn-social btn-facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
                 <svg width="9" height="18" viewBox="0 0 9 18" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.5 3H9V0H5.6C2.8 0 2 1.7 2 4.2V6H0V9H2V18H5V9H8.3L8.9 6H5V4.5C5 3.7 5.3 3 6.5 3Z"/>
@@ -305,15 +377,16 @@
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="btn btn-social btn-instagram" href="https://www.instagram.com/htmlacademy/">
+              <a class="btn-social btn-instagram" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagram</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.7 1.3C13.8 0.4 12.7 0 11.3 0H4.7C1.9 0 0 1.9 0 4.7V11.3C0 12.7 0.4 13.9 1.4 14.7C2.3 15.6 3.4 16 4.7 16H11.3C12.7 16 13.9 15.6 14.7 14.7C15.5 13.8 16 12.7 16 11.3V4.7C16 3.3 15.6 2.1 14.7 1.3ZM8 12.1C5.8 12.1 3.9 10.3 3.9 8C3.9 5.7 5.8 3.9 8 3.9C10.2 3.9 12.1 5.7 12.1 8C12.1 10.3 10.2 12.1 8 12.1ZM12.6 4.7C11.9 4.7 11.3 4.2 11.3 3.4C11.3 2.6 11.8 2.1 12.6 2.1C13.3 2.1 13.9 2.7 13.9 3.4C13.9 4.1 13.3 4.7 12.6 4.7Z"/>
+                  <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                  <path d="M14.7 1.3c-.9-.9-2-1.3-3.4-1.3H4.7C1.9 0 0 1.9 0 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4V4.7c0-1.4-.4-2.6-1.3-3.4ZM8 12.1c-2.2 0-4.1-1.8-4.1-4.1S5.8 3.9 8 3.9c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/>
                 </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a class="btn btn-social btn-twitter" href="https://twitter.com/htmlacademy_ru">
+              <a class="btn-social btn-twitter" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
                 <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.7 0.0999675C11.2 -0.400033 12.3 0.399967 12.9 1.19997C13.4 0.999967 14 0.799967 14.6 0.599967C14.6 1.39997 14.1 1.99997 13.8 2.19997C14.5 2.39997 15 1.79997 15 1.79997C14.9 2.69997 14.1 3.49997 13.6 3.69997C13.4 9.99997 10.8 14.1 4.7 14C4.2 14 4.8 14 4.3 14C4 14 0.6 13.6 0 12.2C2 12.4 3.4 11.8 4.1 11.1C3.3 10.8 1.7 10.7 1.5 8.29997C1.8 8.49997 2 8.59997 2.6 8.49997C1.5 7.69997 0.3 6.99997 0.4 4.99997C0.7 5.29997 1.3 5.49997 1.6 5.39997C1 5.19997 -0.2 2.29997 0.8 0.799967C2.4 2.49997 4.1 4.19997 7.1 4.29997C7.3 2.19997 8.1 0.799967 9.7 0.0999675Z" />
@@ -332,5 +405,67 @@
       </div>
     </footer>
 
+    <!-- Модальное окно заказа доставки -->
+    <!-- для появления модального окна у блока modal-container убрать класс modal-container--close -->
+    <!-- <div class="modal-container"> -->
+    <div class="modal-container modal-container--close">
+      <div class="modal modal-order">
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title">Доставка под заказ</h2>
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="order-form__block order-form__username">
+              <label for="order-username" class="order-form__label">Ваше имя:</label>
+              <!-- Для отображения ошибки ввода блоку-обертке поля добавлен класс error -->
+              <div class="order-form__input-wrap error">
+                <input type="text" class="order-form__input" name="order-username" id="order-username" placeholder="Имя Фамилия" required>
+              </div>
+              <p class="order-form__comment">Пожалуйста, представьтесь</p>
+            </div>
+            <div class="order-form__block order-form__email">
+              <label for="order-email" class="order-form__label">Ваш e-mail:</label>
+              <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+              <div class="order-form__input-wrap">
+                <input type="email" class="order-form__input" name="order-email" id="order-email" placeholder="Введите e-mail" required>
+              </div>
+              <p class="order-form__comment">Забавный у вас адрес</p>
+            </div>
+            <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+            <div class="order-form__block order-form__msg">
+              <label for="order-msg" class="order-form__label">Что нужно привезти:</label>
+              <input type="text" class="order-form__input" name="order-msg" id="order-msg" placeholder="В свободной форме" required>
+            </div>
+            <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+            <div class="order-form__block order-form__quantity">
+              <label for="order-quantity" class="order-form__label">
+                Количество:
+                <span class="order-quantity__icon"></span>
+                <!-- Popover количества товаров -->
+                <!-- появляется при наведении на иконку или при добавлении блоку popover класса popover-open -->
+                <!-- <div class="popover popover-quantity popover-open"> -->
+                <div class="popover popover-quantity">
+                  <p class="popover-quantity__txt">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.</p>
+                </div>
+              </label>
+              <div class="order-form__quantity-wrap">
+                <button class="order-form__set-btn" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <span class="order-form__btn-icon"></span>
+                </button>
+                <input class="order-form__input" type="number" pattern="[0-9]+" name="order-quantity" id="order-quantity" placeholder="1">
+                <button class="order-form__set-btn" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                  <span class="order-form__btn-icon"></span>
+                </button>
+              </div>
+            </div>
+            <button class="order-form__btn main-btn" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <!-- /Модальное окно -->
   </body>
 </html>

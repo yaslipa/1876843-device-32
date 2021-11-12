@@ -25,6 +25,7 @@
         <button class="search-form__btn" type="submit">Найти</button>
       </form>
 
+      <!-- Меню пользователя -->
       <ul class="main-nav__list user-nav">
         <li class="user-nav__item user-nav__profile">
           <a class="user-nav__link" href="#">Коля Петухов</a>
@@ -40,12 +41,81 @@
             <b class="cart-quantity">2</b>
             Корзина
           </a>
+          <!-- Popover корзины -->
+          <!-- для появления всплывающей корзины блоку popover добавляется класс popover-open -->
+          <!-- <div class="popover popover-cart popover-open"> -->
+          <div class="popover popover-cart">
+            <div class="popover__content">
+              <h2 class="popover__title visually-hidden">Корзина</h2>
+              <ul class="popover-cart__list">
+                <li class="popover-cart__item">
+                  <a class="popover-cart__link" href="#">
+                    <img class="popover-cart__img" src="img/content/product-1-thumb.jpg" alt="Любительская селфи-палка" width="41" height="43">
+                    Любительская селфи&#8209;палка
+                  </a>
+                  <button class="popover__del-btn" type="button">
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="popover-cart__item">
+                  <a class="popover-cart__link" href="#">
+                    <img class="popover-cart__img" src="img/content/product-2-thumb.jpg" alt="Профессиональная селфи-палка" width="41" height="43">
+                    Профессиональная селфи&#8209;палка
+                  </a>
+                  <button class="popover__del-btn" type="button">
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <dl class="popover-cart__details">
+                <dt>Товаров</dt>
+                <dd>2</dd>
+                <dt>Сумма</dt>
+                <dd>2000&nbsp;₽</dd>
+              </dl>
+              <a class="popover__open-btn" href="#">Открыть корзину</a>
+            </div>
+          </div>
+          <!-- /Popover корзины -->
         </li>
       </ul>
+        <!-- /Меню пользователя -->
 
+        <!-- Главное меню -->
       <ul class="main-nav__list basic-nav">
         <li class="basic-nav__item basic-nav__catalog">
-          <a class="basic-nav__link" href="catalog.html">Каталог товаров</a>
+          <a class="basic-nav__link catalog-link" href="catalog.html">
+            <b class="catalog-link__txt">Каталог товаров</b>
+            <span class="catalog-link__icon"></span>
+          </a>
+          <!-- Выпадающее подменю -->
+          <div class="basic-nav__subcatalog subcatalog">
+            <ul class="subcatalog__list">
+              <li class="subcatalog__item">
+                <a class="subcatalog__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="subcatalog__item">
+                <a class="subcatalog__link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="subcatalog__item">
+                <a class="subcatalog__link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="subcatalog__list">
+              <li class="subcatalog__item">
+                <a  class="subcatalog__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="subcatalog__item">
+                <a class="subcatalog__link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="subcatalog__list">
+              <li class="subcatalog__item">
+                <a class="subcatalog__link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /Выпадающее подменю -->
         </li>
         <li class="basic-nav__item">
           <a class="basic-nav__link" href="#">Доставка</a>
@@ -57,6 +127,7 @@
           <a class="basic-nav__link" href="#">Контакты</a>
         </li>
       </ul>
+      <!-- /Главное меню -->
     </nav>
   </header>
 
@@ -83,58 +154,89 @@
         <div class="products__filter">
           <p class="products__subtitle">Фильтр:</p>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+
             <fieldset class="filter-form__price filter-price">
               <legend class="filter-form__title">Стоимость</legend>
-              <button class="filter-form__range toggle-min" type="button">
-                <span class="visually-hidden">Изменить минимальную стоимость</span>
-              </button>
-              <button class="filter-form__range toggle-max" type="button">
-                <span class="visually-hidden">Изменить максимальную стоимость</span>
-              </button>
-              <label class="filter-form__label">
-                от <input class="filter-form__input" type="number" name="min-price" min="0">
-              </label>
-              <label class="filter-form__label">
-                до <input class="filter-form__input" type="number" name="max-price">
-              </label>
+              <div class="range">
+                <div class="range__scale">
+                  <div class="range__bar" style="left: 8px; right: 82px;">
+                    <div class="range__data range__min">
+                      <button class="range__toggle" type="button">
+                        <span class="visually-hidden">Изменить минимальную стоимость</span>
+                      </button>
+                      <label class="range__label">
+                        от <input class="range__input" type="number" name="min-price" min="0" value="0">
+                      </label>
+                    </div>
+                    <div class="range__data range__max">
+                      <button class="range__toggle" type="button">
+                        <span class="visually-hidden">Изменить максимальную стоимость</span>
+                      </button>
+                      <label class="range__label">
+                        до <input class="range__input" type="number" name="max-price" value="5000">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </fieldset>
 
             <fieldset class="filter-form__color filter-color">
               <legend class="filter-form__title">Цвет</legend>
               <ul class="filter-form__list">
-                <li>
-                  <label>
-                    <input type="checkbox" name="black-color" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-label">Черный</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="black-color" checked>
+                    <span class="control__mark">
+                      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
+                      </svg>
+                    </span>
+                    <span class="control__label">Черный</span>
                   </label>
                 </li>
-                <li>
-                  <label>
-                    <input type="checkbox" name="white-color" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-label">Белый</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="white-color" checked>
+                    <span class="control__mark">
+                      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
+                      </svg>
+                    </span>
+                    <span class="control__label">Белый</span>
                   </label>
                 </li>
-                <li>
-                  <label>
-                    <input type="checkbox" name="blue-color">
-                    <span class="control-mark"></span>
-                    <span class="control-label">Синий</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="blue-color">
+                    <span class="control__mark">
+                      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
+                      </svg>
+                    </span>
+                    <span class="control__label">Синий</span>
                   </label>
                 </li>
-                <li>
-                  <label>
-                    <input type="checkbox" name="red-color">
-                    <span class="control-mark"></span>
-                    <span class="control-label">Красный</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="red-color">
+                    <span class="control__mark">
+                      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
+                      </svg>
+                    </span>
+                    <span class="control__label">Красный</span>
                   </label>
                 </li>
-                <li>
-                  <label>
-                    <input type="checkbox" name="pink-color">
-                    <span class="control-mark"></span>
-                    <span class="control-label">Розовый</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="checkbox" name="pink-color">
+                    <span class="control__mark">
+                      <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
+                      </svg>
+                    </span>
+                    <span class="control__label">Розовый</span>
                   </label>
                 </li>
               </ul>
@@ -143,18 +245,18 @@
             <fieldset class="filter-form__bluetooth">
               <legend class="filter-form__title">Bluetooth</legend>
               <ul class="filter-form__list">
-                <li>
-                  <label>
-                    <input type="radio" name="has-bluetooth" value="yes" checked>
-                    <span class="control-mark"></span>
-                    <span class="control-label">Есть</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="radio" name="has-bluetooth" value="yes" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Есть</span>
                   </label>
                 </li>
-                <li>
-                  <label>
-                    <input type="radio" name="has-bluetooth" value="no">
-                    <span class="control-mark"></span>
-                    <span class="control-label">Нет</span>
+                <li class="filter-form__item">
+                  <label class="control">
+                    <input class="visually-hidden control__input" type="radio" name="has-bluetooth" value="no">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Нет</span>
                   </label>
                 </li>
               </ul>
@@ -169,15 +271,19 @@
         <div class="products__sort">
           <form class="sort-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="products__subtitle" for="sorting">Сортировка:</label>
-            <select class="select-control" id="sorting" name="sorting">
-              <option value="popular">Сначала популярные</option>
-            </select>
-            <button class="visually-hidden" type="submit">Отсортировать товары</button>
+            <div class="select">
+              <select class="select__control" id="sorting" name="sorting">
+                <option value="popular" selected>Сначала популярные</option>
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+            </div>
+            <button class="visually-hidden" type="submit" tabindex="-1">Отсортировать товары</button>
           </form>
           <a class="sort-btn btn-up" href="#">
             <span class="visually-hidden">По возрастанию</span>
           </a>
-          <a class="sort-btn btn-down sort-btn--active" href="#">
+          <a class="sort-btn btn-down sort-btn--current" href="#">
             <span class="visually-hidden">По убыванию</span>
           </a>
         </div>
@@ -187,7 +293,7 @@
             <a class="product-card__link" href="#">
               <img src="img/content/product-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Любительская селфи&#8209;палка</h3>
-              <b class="product-card__price">500 ₽</b>
+              <b class="product-card__price">500&nbsp;₽</b>
             </a>
             <div class="product-card__tip">
               <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
@@ -197,7 +303,7 @@
             <a class="product-card__link" href="#">
               <img src="img/content/product-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Профессиональная селфи&#8209;палка</h3>
-              <b class="product-card__price">1&thinsp;500 ₽</b>
+              <b class="product-card__price">1&thinsp;500&nbsp;₽</b>
             </a>
             <div class="product-card__tip">
               <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
@@ -207,17 +313,18 @@
             <a class="product-card__link" href="#">
               <img src="img/content/product-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
               <h3 class="product-card__title">Непотопляемая селфи&#8209;палка</h3>
-              <b class="product-card__price">2&thinsp;500 ₽</b>
+              <b class="product-card__price">2&thinsp;500&nbsp;₽</b>
             </a>
             <div class="product-card__tip">
               <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
             </div>
           </article>
+          <!-- добавляем класс product-new для товара с меткой NEW -->
           <article class="products__card product-card product-new">
             <a class="product-card__link" href="#">
               <img src="img/content/product-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-              <h3 class="product-card__title">Селфи-палка «Следуй за&nbsp;мной»</h3>
-              <b class="product-card__price">4&thinsp;900 ₽</b>
+              <h3 class="product-card__title">Селфи-палка «Следуй за мной»</h3>
+              <b class="product-card__price">4&thinsp;900&nbsp;₽</b>
             </a>
             <div class="product-card__tip">
               <a class="product-card__btn main-btn" href="#" tabindex="-1">Подробнее</a>
@@ -326,5 +433,67 @@
     </div>
   </footer>
 
+  <!-- Модальное окно заказа доставки -->
+  <!-- для появления модального окна у блока modal-container убрать класс modal-container--close -->
+  <!-- <div class="modal-container"> -->
+  <div class="modal-container modal-container--close">
+    <div class="modal modal-order">
+      <button class="modal__close-btn" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal__content">
+        <h2 class="modal__title">Доставка под заказ</h2>
+        <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="order-form__block order-form__username">
+            <label for="order-username" class="order-form__label">Ваше имя:</label>
+            <!-- Для отображения ошибки ввода блоку-обертке поля добавлен класс error -->
+            <div class="order-form__input-wrap error">
+              <input type="text" class="order-form__input" name="order-username" id="order-username" placeholder="Имя Фамилия" required>
+            </div>
+            <p class="order-form__comment">Пожалуйста, представьтесь</p>
+          </div>
+          <div class="order-form__block order-form__email">
+            <label for="order-email" class="order-form__label">Ваш e-mail:</label>
+            <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+            <div class="order-form__input-wrap">
+              <input type="email" class="order-form__input" name="order-email" id="order-email" placeholder="Введите e-mail" required>
+            </div>
+            <p class="order-form__comment">Забавный у вас адрес</p>
+          </div>
+          <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+          <div class="order-form__block order-form__msg">
+            <label for="order-msg" class="order-form__label">Что нужно привезти:</label>
+            <input type="text" class="order-form__input" name="order-msg" id="order-msg" placeholder="В свободной форме" required>
+          </div>
+          <!-- Для отображения ошибки ввода блоку-обертке поля добавьте класс error -->
+          <div class="order-form__block order-form__quantity">
+            <label for="order-quantity" class="order-form__label">
+              Количество:
+              <span class="order-quantity__icon"></span>
+              <!-- Popover количества товаров -->
+              <!-- появляется при наведении на иконку или при добавлении блоку popover класса popover-open -->
+              <!-- <div class="popover popover-quantity popover-open"> -->
+              <div class="popover popover-quantity">
+                <p class="popover-quantity__txt">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.</p>
+              </div>
+            </label>
+            <div class="order-form__quantity-wrap">
+              <button class="order-form__set-btn" type="button">
+                <span class="visually-hidden">Уменьшить</span>
+                <span class="order-form__btn-icon"></span>
+              </button>
+              <input class="order-form__input" type="number" pattern="[0-9]+" name="order-quantity" id="order-quantity" placeholder="1">
+              <button class="order-form__set-btn" type="button">
+                <span class="visually-hidden">Увеличить</span>
+                <span class="order-form__btn-icon"></span>
+              </button>
+            </div>
+          </div>
+          <button class="order-form__btn main-btn" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <!-- /Модальное окно -->
 </body>
 </html>
